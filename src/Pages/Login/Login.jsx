@@ -1,4 +1,3 @@
-import React from "react";
 import MainButton from "../../Components/Button/mainButton";
 import MainTitle from "../../Components/Title/MainTitle";
 import { useDispatch, useSelector } from "react-redux";
