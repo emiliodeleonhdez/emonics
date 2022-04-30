@@ -1,10 +1,25 @@
-.side-menu{
+.home{
+
     margin: 0;
-    width: 280px;
-    height: 100vh;
-    background-color: black;
-    .side-menu-title{
-        padding-top: 30px;
-        color: white;
+    padding: 0;
+
+    .side-menu{
+        margin: 0;
+        padding: 0;
+        width: 280px;
+        height: 100vh;
+        background-color: black;
+        .side-menu-title{
+            padding-top: 30px;
+            color: white;
+        }
+    }
+    .main-content{
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+
     }
 }
+

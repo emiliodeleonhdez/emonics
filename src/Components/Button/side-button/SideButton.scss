@@ -1,0 +1,12 @@
+.side-menu-item {
+    width: auto;
+    margin-top: 25px;
+    padding: 5px 0 5px 0;
+    color: white;
+    transition: 0.3s;
+}
+
+.side-menu-item:hover{
+    background-color: #3c3c3c;
+    color: rgb(255, 255, 255);
+}

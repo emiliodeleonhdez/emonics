@@ -2,6 +2,7 @@ import MainButton from "../../Components/Button/mainButton";
 import MainTitle from "../../Components/Title/MainTitle";
 import { useDispatch, useSelector } from "react-redux";
 import { userlogin, userlogout } from "../../redux/login";
+import Home from "../Home/Home";
 
 const Login = () => {
     const loginStatus = useSelector((state) => state.login.value);
@@ -9,8 +10,9 @@ const Login = () => {
 
     return (
         <div>
-            <MainTitle title={`User is: ${loginStatus} `} />
-            <div className="d-flex justify-content-center">
+            <Home>
+                <MainTitle title={`User is: ${loginStatus} `} />
+                <div className="d-flex justify-content-center">
                 <MainButton
                     className="m-1"
                     variant="success"
@@ -24,6 +26,7 @@ const Login = () => {
                     onClick={() => dispatch(userlogout())}
                 />
             </div>
+            </Home>
         </div>
     );
 };
