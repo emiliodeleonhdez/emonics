@@ -8,10 +8,10 @@ const Home = (props) => {
             <div className="container side-menu">
                 <h1 className="side-menu-title">Hello World</h1>
                 <div className="container side-menu-list">
-                    <SideButton buttonText="About me" />
-                    <SideButton buttonText="Proyectos" />
-                    <SideButton buttonText="Cuenta" />
-                    <SideButton buttonText="Log out" />
+                    <SideButton buttontext="About me" />
+                    <SideButton buttontext="Proyectos" />
+                    <SideButton buttontext="Cuenta" />
+                    <SideButton buttontext="Log out" />
                 </div>
             </div>
             <div className="container main-content">

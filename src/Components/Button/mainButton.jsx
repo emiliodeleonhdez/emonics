@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap";
 const MainButton = (props) => {
     return (
         <div>
-            <Button {...props}>{props.buttonText}</Button>
+            <Button {...props}>{props.buttontext}</Button>
         </div>
     );
 };

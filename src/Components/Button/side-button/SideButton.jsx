@@ -5,7 +5,7 @@ const SideButton = (props) => {
   return (
     <>
         <div className='container side-menu-item'>
-            {props.buttonText}
+            {props.buttontext}
         </div>
     </>
   )
