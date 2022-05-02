@@ -2,7 +2,6 @@ import React from "react";
 
 const Input = (props) => {
     return (
-        <div>
             <div className="mb-3">
                 <label
                     className="form-label"
@@ -17,7 +16,6 @@ const Input = (props) => {
                     onChange={(e)=>props.onChangeValue(e.target.value)}
                     />
             </div>
-        </div>
     );
 };
 

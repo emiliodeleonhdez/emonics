@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const MainTitle = (props) => {
-  return (
-    <div>
-        <h1>{props.title}</h1>
-    </div>
-  )
-}
+    return <h1>{props.title}</h1>;
+};
 
-export default MainTitle
+export default MainTitle;

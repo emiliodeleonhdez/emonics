@@ -10,7 +10,7 @@ const Login = () => {
     const dispatch = useDispatch();
     const [identifier, setIdentifier] = useState("");
     const [password, setPassword] = useState("");
-    const [userstatus, setUserstatus] = useState("")
+    const [userstatus, setUserstatus] = useState("");
 
     const handleChangeIdentifier = (value) => {
         setIdentifier(value);
@@ -21,7 +21,6 @@ const Login = () => {
     };
 
     const handelLogin = () => {
-
         fetch("http://localhost:1337/api/auth/local", {
             method: "POST",
             body: JSON.stringify({ identifier, password }),
@@ -36,9 +35,9 @@ const Login = () => {
                 if (response.jwt) {
                     console.log(`User ${response.user.username} is authorized`);
                     dispatch(userlogin());
-                    setUserstatus("Credentials OK")
-                }else{
-                    setUserstatus("Bad Credentials")
+                    setUserstatus("Credentials OK");
+                } else {
+                    setUserstatus("Bad Credentials");
                 }
             });
     };
@@ -46,9 +45,9 @@ const Login = () => {
     const loginStatus = useSelector((state) => state.login.value);
 
     return (
-        <div>
-            <Home>
-                <MainTitle title={`User is: ${loginStatus} `} />
+        <Home title="Working login with Redux and StrapiJS as Backend">
+            <MainTitle title={`User is: ${loginStatus} `} />
+            <div className="container login-container">
                 <form>
                     <Input
                         lableText="Email"
@@ -56,7 +55,7 @@ const Login = () => {
                         inputType="text"
                         value={identifier}
                         onChangeValue={handleChangeIdentifier}
-                        />
+                    />
                     <Input
                         lableText="Password"
                         inputPlaceholder="******"
@@ -72,8 +71,8 @@ const Login = () => {
                     />
                     {userstatus}
                 </form>
-            </Home>
-        </div>
+            </div>
+        </Home>
     );
 };
 
