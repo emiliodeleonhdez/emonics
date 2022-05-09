@@ -7,6 +7,7 @@ import {
     BrowserRouter,
     Routes
   } from "react-router-dom";
+import Pagination from "./Pages/Pagination/Pagination";
 
 function App() {
     return (
@@ -15,6 +16,7 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home/>}/>
                     <Route path="/login" element={<Login/>}/>
+                    <Route path="/pagination" element={<Pagination/>}/>
                 </Routes>
             </BrowserRouter>
         </div>
