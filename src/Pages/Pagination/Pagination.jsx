@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ReactPaginate from "react-paginate";
 import Home from "../Home/Home";
 import "./Pagination.scss"
 
@@ -9,13 +10,13 @@ const Pagination = () => {
     useEffect(() => {
         fetch("https://jsonplaceholder.typicode.com/comments")
             .then((response) => response.json())
-            .then((json) => setComments(json.slice(0, 50)));
+            .then((json) => setComments(json.slice(0, 500)));
     }, []);
-
-    console.log(comments);
 
     const commentsPerPage = 10;
     const pagesVisited = pageNumber * commentsPerPage;
+
+    const pageCount = Math.ceil(comments.length / commentsPerPage)
 
     const displayComments = comments
         .slice(pagesVisited, pagesVisited + commentsPerPage)
@@ -29,10 +30,26 @@ const Pagination = () => {
             );
         });
 
+        const changePage = ({ selected }) =>{
+            setPageNumber(selected)
+        }
+
     return <Home>
         <div className="comments-container">
         {displayComments}
         </div>
+        <ReactPaginate
+            previousLabel={"Previous"}
+            nextLabel={"Next"}
+            pageCount={pageCount}
+            onPageChange={changePage}
+            containerClassName={"paginationButtons"}
+            previousLinkClassName={"previousButton"}
+            nextLinkClassName={"nextButton"}
+            disabledClassName={"paginationDisabled"}
+            activeClassName={"paginationActive"}
+
+        />  
         </Home>;
 };
 
